@@ -13,6 +13,7 @@ public class swordman_spin : MonoBehaviour
     {
         entertrigger = false;
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Player")

@@ -6,8 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] spawnPoints;
     public GameObject[] enemies;
-    public float[] enemyChance;
-    private float chanceNumber;
+    public int[] enemyChance;
+    private int chanceNumber;
 
     //private Dictionary<GameObject, float> dictionary = new Dictionary<GameObject, float>();
 
@@ -21,14 +21,17 @@ public class SpawnManager : MonoBehaviour
             Transform spawnLocation = spawnPoints[i].transform;
 
             chanceNumber = Random.Range(0, 100);
+            Debug.Log(chanceNumber);
 
             for (int index = 0; index < enemies.Length; index++)
             {
-                float newChanceNumber = chanceNumber - enemyChance[index];
-                Debug.Log(chanceNumber);
-                if (newChanceNumber <= 0)
+                if (chanceNumber > 0)
                 {
-                    Instantiate(enemies[index], spawnLocation.position, spawnLocation.rotation);
+                    chanceNumber = chanceNumber - enemyChance[index];
+                    if (chanceNumber <= 0)
+                    {
+                        Instantiate(enemies[index], spawnLocation.position, spawnLocation.rotation);
+                    }
                 }
             }
         }
