@@ -18,11 +18,7 @@ public class PlayerCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision collisionInfo)
     {
-        if (PS.godmode)
-        {
-            Debug.Log("niges");
-        }
-
+        if (PS.godmode) { }
         else
 
         {

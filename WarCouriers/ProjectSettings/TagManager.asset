@@ -4,10 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - swordman
   - godmode
   - spearman
   - GroundSpawner
+=======
+  - godmode
+  - spearman
+  - swordman
+  - slowmode
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
