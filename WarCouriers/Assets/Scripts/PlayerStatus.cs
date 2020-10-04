@@ -5,8 +5,8 @@ public class PlayerStatus : MonoBehaviour
 {
     public bool godmode;
     public Rigidbody rb;
+    public float godmodeDuration;
 
-    // Start is called before the first frame update
     void Start()
     {
         godmode = false;
@@ -21,14 +21,10 @@ public class PlayerStatus : MonoBehaviour
         }
     }
 
-
-
     IEnumerator godmode_on()
     {
-        rb.mass = 2000;
-        yield return new WaitForSecondsRealtime(3);
+        rb.mass = 10000;
+        yield return new WaitForSecondsRealtime(godmodeDuration);
         godmode = false;
     }
-
-
 }

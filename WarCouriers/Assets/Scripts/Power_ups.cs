@@ -2,8 +2,6 @@
 
 public class Power_ups : MonoBehaviour
 {
-
-
     public PlayerStatus PS;
     public Rigidbody triggerbody;
 
@@ -14,7 +12,6 @@ public class Power_ups : MonoBehaviour
             PS.godmode = true;
             Destroy(triggerbody.gameObject);
         }
-
     }
 
 }

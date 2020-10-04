@@ -35,7 +35,5 @@ public class swordman_spin : MonoBehaviour
         if (entertrigger)
             swordmanRB.AddTorque(spin);
         else swordmanRB.AddTorque(Vector3.zero);
-
     }
-
 }
