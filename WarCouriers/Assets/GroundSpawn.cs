@@ -6,13 +6,16 @@ public class GroundSpawn : MonoBehaviour
 {
     public GameObject ground;
     public Transform groundSpawnPoint;
+    GameObject groundSpawner;
 
     private bool despawn;
 
     void Start()
     {
         despawn = false;
-        ground = GroundDetector.
+        groundSpawner = GameObject.Find("GroundSpawner");
+        GroundDetector gd = groundSpawner.GetComponent<GroundDetector>();
+        ground = gd.ground;
     }
 
     void Update()
