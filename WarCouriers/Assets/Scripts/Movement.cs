@@ -30,16 +30,9 @@ public class Movement : MonoBehaviour
 
 
         if (canMove)
-            {
-
-            if (rb.velocity < new Vector3(0,0,15)
-            {
-                rb.AddForce(0, 0, Forward * Time.deltaTime, ForceMode.Impulse);
-            }
-
-        else rb.AddForce(0, 0, 0);
-
-        if (a)
+        {
+            rb.AddForce(0, 0, Forward * Time.deltaTime, ForceMode.Impulse);
+            if (a)
             {
                 Vector3 asideVect = new Vector3(Side, 0, 0);
                 asideVect = asideVect.normalized * speed * Time.deltaTime;
@@ -57,14 +50,14 @@ public class Movement : MonoBehaviour
             {
                 rb.AddForce(0, Up * Time.deltaTime, -Forward * Time.deltaTime, ForceMode.Impulse);
             }
-
-
         }
-            else
-            {
-                Debug.Log("NO ME PUEDO MOVER AAA");
-            }
+        else
+        {
+            Debug.Log("NO ME PUEDO MOVER AAA");
         }
+    }
+
+        
 }
 
 
