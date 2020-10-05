@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public bool canMove;
     public float Up = 100;
     public float speed;
+    public float speedlimit;
 
 
     private void Start()
@@ -26,13 +27,10 @@ public class Movement : MonoBehaviour
         bool d = Input.GetKey(KeyCode.D);
         bool space = Input.GetKey(KeyCode.Space);
 
-
-
-
         if (canMove)
             {
 
-            if (rb.velocity < new Vector3(0,0,15)
+            if (rb.velocity.magnitude < speedlimit)
             {
                 rb.AddForce(0, 0, Forward * Time.deltaTime, ForceMode.Impulse);
             }
