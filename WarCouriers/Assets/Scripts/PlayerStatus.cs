@@ -6,6 +6,8 @@ public class PlayerStatus : MonoBehaviour
     public bool godmode;
     public Rigidbody rb;
     public float godmodeDuration;
+    public float factor;
+    public float duration;
 
     void Start()
     {

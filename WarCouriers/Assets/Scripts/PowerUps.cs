@@ -6,13 +6,12 @@ public class PowerUps : MonoBehaviour
 
     public PlayerStatus PS;
     public Rigidbody triggerbody;
-    public float slowmodeFactor = 0.05f;
-    public float slowmodeDuration = 3f;
+    public PlayerStatus slowmode;
 
 
     void Update()
     {
-        Time.timeScale += (1f / slowmodeDuration) * Time.unscaledDeltaTime;
+        Time.timeScale += (1f / slowmode.duration) * Time.unscaledDeltaTime;
         Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
         triggerbody.AddTorque(Vector3.up * 50);
     }
@@ -31,7 +30,7 @@ public class PowerUps : MonoBehaviour
 
             if (triggerbody.tag == "slowmode")
             {
-                Time.timeScale = slowmodeFactor;
+                Time.timeScale = slowmode.factor;
                 Time.fixedDeltaTime = Time.timeScale * .02f;
                 Debug.Log("hola");
             }
