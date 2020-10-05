@@ -10,18 +10,32 @@ public class Movement : MonoBehaviour
     public float Up = 100;
     public float speed;
     public float speedlimit;
+    private bool grounded;
 
 
     private void Start()
     {
         canMove = true;
         rb = GetComponent<Rigidbody>();
+        grounded = true;
     }
 
 
-    // Update is called once per frame
     void FixedUpdate()
         {
+        int layerMask = 1 << 8;
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 0.5f, layerMask))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * hit.distance, Color.yellow);
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
+
         float Side = Input.GetAxis("Horizontal");
         bool a = Input.GetKey(KeyCode.A);
         bool d = Input.GetKey(KeyCode.D);
@@ -51,7 +65,7 @@ public class Movement : MonoBehaviour
                 rb.MovePosition(transform.position + dsideVect);
             }
 
-            if (space)
+            if (space && grounded)
             {
                 rb.AddForce(0, Up * Time.deltaTime, -Forward * Time.deltaTime, ForceMode.Impulse);
             }
