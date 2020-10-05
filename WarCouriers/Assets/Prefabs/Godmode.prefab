@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6378729987602016839}
   - component: {fileID: 6378729987602016832}
   - component: {fileID: 7957777001651793372}
-  - component: {fileID: 5989763072758744253}
+  - component: {fileID: 3187447538554656472}
   m_Layer: 0
   m_Name: Godmode
   m_TagString: godmode
@@ -109,7 +109,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5989763072758744253
+--- !u!114 &3187447538554656472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,10 +118,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6378729987602016834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a65cef3562190a54889431412c60ea5a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9806aab912e5ca24a9d0a2bc9eb4e460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PS: {fileID: 6998672705501904351, guid: be90dfe6a2d76774f8c46c80a91012e0, type: 3}
+  PS: {fileID: 0}
   triggerbody: {fileID: 7957777001651793372}
   slowmodeFactor: 0.05
   slowmodeDuration: 3
