@@ -14,10 +14,11 @@ public class PowerUps : MonoBehaviour
         Time.timeScale += (1f / slowmode.duration) * Time.unscaledDeltaTime;
         Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
         triggerbody.AddTorque(Vector3.up * 50);
+        Debug.Log(Time.timeScale + "asd");
     }
 
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Player")
         {
@@ -32,9 +33,9 @@ public class PowerUps : MonoBehaviour
             {
                 Time.timeScale = slowmode.factor;
                 Time.fixedDeltaTime = Time.timeScale * .02f;
-                Debug.Log("hola");
+                //Debug.Log("hola");
             }
-            Destroy(triggerbody.gameObject);
+            //Destroy(triggerbody.gameObject);
         }
     }
 }

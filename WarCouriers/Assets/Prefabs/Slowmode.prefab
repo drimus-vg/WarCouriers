@@ -88,7 +88,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6378729987602016834}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -123,5 +123,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PS: {fileID: 0}
   triggerbody: {fileID: 7957777001651793372}
-  slowmodeFactor: 0.05
-  slowmodeDuration: 3
+  slowmode: {fileID: 0}
