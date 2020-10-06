@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9806aab912e5ca24a9d0a2bc9eb4e460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PS: {fileID: 0}
   triggerbody: {fileID: 7957777001651793372}
-  slowmode: {fileID: 0}
+  Event: {fileID: 4560874488060569032, guid: 403d17ce004b35242a719bad6ec8f298, type: 3}
+  WorldEvents: {fileID: 6755220746182064540, guid: 403d17ce004b35242a719bad6ec8f298,
+    type: 3}

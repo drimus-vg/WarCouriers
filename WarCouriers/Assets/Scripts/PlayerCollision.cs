@@ -5,7 +5,7 @@ public class PlayerCollision : MonoBehaviour
     public Rigidbody rb;
     public Movement movement;
     public Transform player;
-    public PlayerStatus PS;
+    public WorldEvents Event;
     Movement _movement;
 
 
@@ -18,7 +18,7 @@ public class PlayerCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision collisionInfo)
     {
-        if (PS.godmode) { }
+        if (Event.godmode) { }
         else
 
         {

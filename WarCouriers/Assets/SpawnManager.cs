@@ -21,7 +21,7 @@ public class SpawnManager : MonoBehaviour
             Transform spawnLocation = spawnPoints[i].transform;
 
             chanceNumber = Random.Range(0, 100);
-            Debug.Log(chanceNumber);
+            //Debug.Log(chanceNumber);
 
             for (int index = 0; index < enemies.Length; index++)
             {

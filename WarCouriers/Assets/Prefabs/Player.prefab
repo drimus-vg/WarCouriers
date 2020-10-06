@@ -377,7 +377,6 @@ GameObject:
   - component: {fileID: 6998672705501904323}
   - component: {fileID: 6998672705501904322}
   - component: {fileID: 6998672705501904349}
-  - component: {fileID: 6998672705501904351}
   m_Layer: 0
   m_Name: Player
   m_TagString: godmode
@@ -430,7 +429,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!114 &6998672705501904322
 MonoBehaviour:
@@ -465,19 +464,4 @@ MonoBehaviour:
   rb: {fileID: 6998672705501904323}
   movement: {fileID: 6998672705501904322}
   player: {fileID: 7317369682685587512}
-  PS: {fileID: 6998672705501904351}
---- !u!114 &6998672705501904351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6998672705501904320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0072ebc0857c5c54997b8647858a6ae4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  godmode: 0
-  rb: {fileID: 6998672705501904323}
-  godmodeDuration: 0
+  WEvent: {fileID: 4560874488060569032, guid: 403d17ce004b35242a719bad6ec8f298, type: 3}
